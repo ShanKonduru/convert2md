@@ -14,13 +14,13 @@ def process_directory(root_dir):
             converter = None
 
             if file_extension == ".pdf":
-                converter = PdfConverter(item)
+                converter = PdfConverter(item, root_path)
             elif file_extension in [".doc", ".docx"]:
-                converter = DocConverter(item)
+                converter = DocConverter(item, root_path)
             elif file_extension == ".txt":
-                converter = TxtConverter(item)
+                converter = TxtConverter(item, root_path)
             elif file_extension in [".jpg", ".jpeg", ".png", ".gif"]: # Add more image formats if needed
-                converter = ImageConverter(item)
+                converter = ImageConverter(item, root_path)
             elif file_extension == ".ppt" or file_extension == ".pptx":
                 print(f"Skipping PPT/PPTX file: '{item.name}'. Conversion not yet implemented.")
                 continue # Skip PPT for now
