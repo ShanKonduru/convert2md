@@ -1,2 +1,2 @@
 @echo off
-.\venv\Scripts\activate
+.\.venv\Scripts\activate
