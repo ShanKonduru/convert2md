@@ -1,1 +1,4 @@
 # List your project dependencies here
+pdfminer.six
+python-docx
+Pillow
